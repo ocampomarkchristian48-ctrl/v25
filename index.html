@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mind Logic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sky3d">
+<div class="sun"></div>
+
+<div class="cloud layer1" style="top:120px"></div>
+<div class="cloud layer2" style="top:260px"></div>
+<div class="cloud layer3" style="top:420px"></div>
+
+<div class="bird bird1">🐦</div>
+<div class="bird bird2">🐦</div>
+</div>
+
+<h1 class="title">Mind Logic</h1>
+
+<!-- START -->
+<div class="card" id="start">
+<h2>Enter Your Name</h2>
+<input id="name" placeholder="Your name">
+<button onclick="startGame()">Start</button>
+</div>
+
+<!-- DESCRIPTION (may PLAY button) -->
+<div id="desc" class="hidden descPage">
+<h1>Description</h1>
+<p>This game tests your logic skills.</p>
+<p>Each topic has 5 random questions.</p>
+<p>You need 70% to pass.</p>
+
+<button onclick="showTopics()">Play</button>
+</div>
+
+<!-- TOPICS -->
+<div id="topics" class="hidden">
+<h2>Select Topic</h2>
+
+<div class="topics">
+<div class="topic" onclick="playTopic('prob',this)">Probability</div>
+<div class="topic" onclick="playTopic('group',this)">Group Theory</div>
+<div class="topic" onclick="playTopic('pred',this)">Predicate Logic</div>
+<div class="topic" onclick="playTopic('count',this)">Counting</div>
+</div>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="hidden quiz">
+<h2 id="question"></h2>
+<div id="answers" class="answers"></div>
+</div>
+
+<!-- RESULT -->
+<div id="result" class="hidden resultBox">
+<h2 id="final"></h2>
+<button onclick="location.reload()">Try Again</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
